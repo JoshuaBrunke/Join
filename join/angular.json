@@ -97,8 +97,8 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/Join/",
-              "deployUrl": "/Join/",
+              "baseHref": "/",
+              "deployUrl": "/",
               "externalDependencies": [
                 "assets/icons/todo.svg",
                 "assets/icons/done.svg", 

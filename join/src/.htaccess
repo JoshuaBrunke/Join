@@ -1,18 +1,18 @@
 Options -MultiViews -Indexes
 RewriteEngine On
 
-# Set the base directory for the application
-RewriteBase /Join/
+# Set the base directory for the application (root since it's a subdomain)
+RewriteBase /
 
 # Don't rewrite files or directories that exist
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Don't rewrite for certain directories and file types
-RewriteCond %{REQUEST_URI} !^/Join/(assets|favicon\.ico|.*\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico|json)).*$ [NC]
+RewriteCond %{REQUEST_URI} !^/(assets|favicon\.ico|.*\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico|json)).*$ [NC]
 
 # Rewrite everything else to index.html to allow Angular routing
-RewriteRule ^.*$ /Join/index.html [L]
+RewriteRule ^.*$ /index.html [L]
 
 # Security headers
 <IfModule mod_headers.c>
