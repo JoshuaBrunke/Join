@@ -97,6 +97,7 @@
                 }
               ],
               "outputHashing": "all",
+              "sourceMap": false,
               "baseHref": "/",
               "deployUrl": "/",
               "externalDependencies": [
