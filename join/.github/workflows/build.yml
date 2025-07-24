@@ -42,7 +42,7 @@ jobs:
         EOF
     
     - name: Build
-      run: npm run build
+      run: npm run build -- --source-map=false
     
     - name: Test
       run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
